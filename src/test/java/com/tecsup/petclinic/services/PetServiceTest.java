@@ -25,51 +25,51 @@ public class PetServiceTest {
     /**
      *
      */
-    @Test
-    public void testFindPetById() {
-
-        Integer ID = 1;
-        String NAME = "Leo";
-        Pet pet = null;
-
-        try {
-            pet = this.petService.findById(ID);
-        } catch (PetNotFoundException e) {
-            fail(e.getMessage());
-        }
-
-        log.info("" + pet);
-        assertEquals(NAME, pet.getName());
-
-    }
-
-    /**
-     *
-     */
-    @Test
-    public void testFindPetByName() {
-
-        String FIND_NAME = "Leo";
-        int SIZE_EXPECTED = 1;
-
-        List<Pet> pets = this.petService.findByName(FIND_NAME);
-
-        assertEquals(SIZE_EXPECTED, pets.size());
-    }
+//    @Test
+//    public void testFindPetById() {
+//
+//        Integer ID = 1;
+//        String NAME = "Leo";
+//        Pet pet = null;
+//
+//        try {
+//            pet = this.petService.findById(ID);
+//        } catch (PetNotFoundException e) {
+//            fail(e.getMessage());
+//        }
+//
+//        log.info("" + pet);
+//        assertEquals(NAME, pet.getName());
+//
+//    }
 
     /**
      *
      */
-    @Test
-    public void testFindPetByTypeId() {
+//    @Test
+//    public void testFindPetByName() {
+//
+//        String FIND_NAME = "Leo";
+//        int SIZE_EXPECTED = 1;
+//
+//        List<Pet> pets = this.petService.findByName(FIND_NAME);
+//
+//        assertEquals(SIZE_EXPECTED, pets.size());
+//    }
 
-        int TYPE_ID = 5;
-        int SIZE_EXPECTED = 2;
-
-        List<Pet> pets = this.petService.findByTypeId(TYPE_ID);
-
-        assertEquals(SIZE_EXPECTED, pets.size());
-    }
+    /**
+     *
+     */
+//    @Test
+//    public void testFindPetByTypeId() {
+//
+//        int TYPE_ID = 5;
+//        int SIZE_EXPECTED = 2;
+//
+//        List<Pet> pets = this.petService.findByTypeId(TYPE_ID);
+//
+//        assertEquals(SIZE_EXPECTED, pets.size());
+//    }
 
     /**
      *

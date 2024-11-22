@@ -64,7 +64,7 @@ public class OwnerControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.address", is("789 Oak St")));  // Verificamos que la dirección se ha actualizado correctamente
     }
-}
+    }
 
    /* @Test
     void testDeleteOwner() throws Exception {

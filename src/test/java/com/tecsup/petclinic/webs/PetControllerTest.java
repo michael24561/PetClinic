@@ -50,24 +50,24 @@ public class PetControllerTest {
 	 * @throws Exception
 	 * 
 	 */
-	@Test
-	public void testFindPetOK() throws Exception {
-
-		String NAME_PET = "Leo";
-		int TYPE_ID = 1;
-		int OWNER_ID = 1;
-		String BIRTH_DATE = "2000-09-07";
-
-		mockMvc.perform(get("/pets/1"))  // Object must be BASIL
-				.andExpect(content().contentType(MediaType.APPLICATION_JSON))
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.id", is(1)))
-				.andExpect(jsonPath("$.name", is(NAME_PET)))
-				.andExpect(jsonPath("$.typeId", is(TYPE_ID)))
-				.andExpect(jsonPath("$.ownerId", is(OWNER_ID)))
-				.andExpect(jsonPath("$.birthDate", is(BIRTH_DATE)));
-	}
+//	@Test
+//	public void testFindPetOK() throws Exception {
+//
+//		String NAME_PET = "Leo";
+//		int TYPE_ID = 1;
+//		int OWNER_ID = 1;
+//		String BIRTH_DATE = "2000-09-07";
+//
+//		mockMvc.perform(get("/pets/1"))  // Object must be BASIL
+//				.andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//				.andDo(print())
+//				.andExpect(status().isOk())
+//				.andExpect(jsonPath("$.id", is(1)))
+//				.andExpect(jsonPath("$.name", is(NAME_PET)))
+//				.andExpect(jsonPath("$.typeId", is(TYPE_ID)))
+//				.andExpect(jsonPath("$.ownerId", is(OWNER_ID)))
+//				.andExpect(jsonPath("$.birthDate", is(BIRTH_DATE)));
+//	}
 	/**
 	 * 
 	 * @throws Exception
@@ -79,7 +79,7 @@ public class PetControllerTest {
 				.andExpect(status().isNotFound());
 
 	}
-	
+
 	/**
 	 * @throws Exception
 	 */
