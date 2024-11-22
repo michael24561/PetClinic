@@ -1,0 +1,19 @@
+# ===============================
+# = PARAMETERS
+# ===============================
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#application-properties.core
+
+# ===============================
+# = DATA SOURCE
+# ===============================
+# UNIX or MAC
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/PETCLINIC_DB?useSSL=false&serverTimezone=UTC
+    username: root  # Cambia a tu usuario de MySQL
+    password: ""    # Cambia a tu contraseña si la tienes configurada
+  jpa:
+    hibernate:
+      ddl-auto: update  # Esto asegura que Hibernate actualice las tablas si es necesario
+    show-sql: true  # Muestra las consultas SQL ejecutadas
